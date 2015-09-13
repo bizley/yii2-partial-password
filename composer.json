@@ -1,0 +1,24 @@
+{
+    "name": "bizley/partialpassword",
+    "type": "yii2-extension",
+    "description": "Partial password implementation for Yii 2.",
+    "keywords": ["partial password", "yii2", "behavior", "widget", "security", "password", "registration", "login"],
+    "license": "Apache-2.0",
+    "support": {
+        "source": "https://github.com/bizley-code/yii2-partial-password"
+    },
+    "authors": [
+        {
+            "name": "Pawel Bizley Brzozowski",
+            "email": "pb@human-device.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "bizley\\partialpassword\\": ""
+        }
+    }
+}
