@@ -16,9 +16,13 @@ and run composer update or alternatively run composer require bizley/partialpass
 
 ## PartialPasswordBehavior
 
-PartialPasswordBehavior generates the partial password hashes based on raw user's password that can be used in login process - instead of typing the whole password user has to type only 
-few selected characters from it.
+PartialPasswordBehavior generates the partial password hashes based on raw user's password that can be used in login process - instead of typing the whole password user has to type only few selected characters from it.
 This code generated random number of partial passwords hashes with random patterns of characters to type.
+
+# WARNING
+
+THIS APPROACH WILL CREATE LESS SECURED PASSWORDS THAN DEFAULT "HASH THE WHOLE PASSWORD" WAY. THE STRENGHT OF PARTIAL PASSWORDS DEPENDS ON bitsRange, charactersMin AND charactersMax PARAMETERS - TO CREATE EQUALLY STRONG PASSWORD IT WOULD HAVE TO BE (length of password) = bitsRange = charactersMax = charactersMin - EVERY PARAMETER SMALLER THAN THE ONE BEFORE IT CREATES WEAKER PASSWORDS.
+IF YOUR APPLICATION NEEDS STRONGER PASSWORDS USE STANDARD PASSWORD HASHING.
 
 Use PartialPassword widget to render the characters fields based on the selected pattern in your view.
 
